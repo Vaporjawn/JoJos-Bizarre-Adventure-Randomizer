@@ -2,10 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>JoJo Randomizer</title>
+    <title>JoJo's Bizarre Adventure Randomizer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
   </head>
   <body>
-<h1> JoJo Randomizer </h1>
+    <img src = "https://upload.wikimedia.org/wikipedia/commons/a/af/JoJo%27s_Bizarre_Adventure_-_Stardust_Crusaders_logo.png" alt="jojo logo">
+<h1>JoJo's Bizarre Adventure Randomizer</h1>
 
 <!-- button that allows the user to interact with the scripts -->
 <form id="form1" >
@@ -20,7 +23,7 @@ function selectAnime() {
    window.open(statement, "_blank");
   }
 </script>
-
+<!-- lists all of the anime episodes in an Array -->
 <script>
 var episodes = [
     //phantom blood
@@ -183,18 +186,39 @@ var episodes = [
     "https://www.crunchyroll.com/jojos-bizarre-adventure/episode-38-golden-wind-requiem-783795",
     "https://www.crunchyroll.com/jojos-bizarre-adventure/episode-39-the-sleeping-slave-783796",
   ]
-
 </script>
 </form>
 
-<form>
+<script>
+var backgrounds = [
+  "https://images8.alphacoders.com/999/thumb-1920-999059.jpg",
+  "https://images4.alphacoders.com/773/thumb-1920-773243.jpg",
+  "https://i.pinimg.com/originals/da/53/40/da534077fadf9c1ef660664c82a7cecb.png",
+
+]
+</script>
+
+<form id="form2">
+  <button type"button" onClick="newBackground()"> New Background </button>
+    <script>
+    function newBackground(){
+      var check;
+      check = backgrounds[Math.floor(Math.random() * 3)+1];
+      document.body.style.backgroundImage = "url(check)";
+    }
+
+</script>
+
+</form>
+
+<form id ="form3">
   <!-- a button that allows the user to fresh the page -->
   <button type="button" onClick="refreshPage()"> Refresh </button>
   <!-- script for the button  -->
-  <script>
-  function refreshPage(){
-      window.location.reload();
-  }
+    <script>
+      function refreshPage(){
+        window.location.reload();
+      }
   </script>
 
   </body>
