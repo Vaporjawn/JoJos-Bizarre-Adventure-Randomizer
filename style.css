@@ -5,6 +5,9 @@ p {
   border: 1px solid powderblue;
 }
 h1 {
-  background-color: lightblue;
   margin-middle: 0px;
+}
+body {
+  /* background-color: darkgrey; */
+  background-image: url('https://i.pinimg.com/originals/da/53/40/da534077fadf9c1ef660664c82a7cecb.png');
 }
