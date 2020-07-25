@@ -18,6 +18,9 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+footer{
+  background-color: rgb(32, 32, 32);
+}
 form {
   text-align: center;
   height: 500px;
