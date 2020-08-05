@@ -67,3 +67,8 @@ function newBackground(){
     check = backgrounds[Math.floor(Math.random() * 39)+1];
     document.body.style.backgroundImage = 'url('+check+')';
 }
+function initBackground(){
+    var check;
+    check = 
+    document.body.style.backgroundImage = 'url('+check+')';
+}
