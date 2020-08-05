@@ -39,14 +39,3 @@ var backgrounds = [
   "https://i.imgur.com/b6lzW5K.jpg",
   "https://cdn.wallpapersafari.com/47/69/xGvPAU.jpg",
 ]
-var initBackgrounds = [
-  "PB.png",
-  "PB2.png",
-  "SDC.png",
-  "DiU.png",
-  "VA.png",
-  "SO.png",
-  "SBRJohnny.png",
-  "SBRLucy.png",
-  "JJL.png"
-]

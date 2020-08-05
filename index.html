@@ -9,12 +9,13 @@
      <link rel="stylesheet" href="style.css">
      <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
       <script src="./JavaScript/backgrounds.js"></script>
+      <script src="./JavaScript/initBackgrounds.js"></script>
       <script src="./JavaScript/episodes.js"></script>
       <script src="./JavaScript/javascript.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script>initBackground();</script>
       <a href="https://www.youtube.com/watch?v=0x2P7Na5V-U" target="_blank"><img src = "https://upload.wikimedia.org/wikipedia/commons/a/af/JoJo%27s_Bizarre_Adventure_-_Stardust_Crusaders_logo.png" alt="jojo logo"></a>
 <h1>JoJo's Bizarre Adventure Randomizer</h1>
-<script>initBackground();</script>
+
 <!-- button that allows the user to interact with the scripts -->
 <form id="form">
   <button type="button" id="button" onclick="selectAnime()"> Select Anime</button><br/><br/>
@@ -24,11 +25,12 @@
   <!-- a button that allows the user to fresh the page -->
   <button type="button" id="button" onClick="refreshPage()"> Refresh </button><br/>
 </form>
+
 		<!-- Footer -->
     <footer id="footer">
       <div class="inner">
         <ul class="copyright">
-          <li>&copy; <a href = "https://github.com/vaporjawn/" target = "_blank" style="color: white;">Victor Williams</a></li>
+          <li> <a href = "https://github.com/vaporjawn/" target = "_blank" style="color: white;"> &copy; Victor Williams</a></li>
         </ul> 
       </div>
     </footer>
