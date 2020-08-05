@@ -1,7 +1,8 @@
 function selectManga() {
     var mangaChapter = "";
     var chapterNumber;
-    var part = Math.floor(Math.random() * 8)+1;;
+    var chapterSelect;
+    var part = Math.floor(Math.random() * 8)+1;
 
     switch(part){
         case 1:
@@ -9,8 +10,15 @@ function selectManga() {
             mangaChapter = "https://manganelo.com/chapter/phantom_blood/chapter_" + chapterNumber + ".2";
         break;
         case 2:
-            chapterNumber = Math.floor(Math.random() * 113)+1;
-            mangaChapter = "https://manganelo.com/chapter/phantom_blood/chapter_" + chapterNumber;
+            chapterSelect = Math.floor(Math.random() * 2)+1;
+            if (chapterSelect == 1){
+                chapterNumber = Math.random() * (1005754 - 1005751) + 1005751 
+                mangaChapter = "https://mangaplus.shueisha.co.jp/viewer/" + chapterNumber;
+            }
+            if(chapterSelect == 2){
+                chapterNumber = Math.random() * (1005791 - 1005785) + 1005785 
+                mangaChapter = "https://mangaplus.shueisha.co.jp/viewer/" + chapterNumber;
+            }
         break;
         case 3:
             chapterNumber = Math.floor(Math.random() * 612)+1;
