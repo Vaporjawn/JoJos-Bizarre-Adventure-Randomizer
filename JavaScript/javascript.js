@@ -69,7 +69,9 @@ function newBackground(){
 }
 function initBackground(){
     var check;
-    check = initBackgrounds[Math.floor(Math.random() * 10)+1];
-    var link = "https://github.com/Vaporjawn/JoJos-Bizarre-Adventure-Randomizer/blob/master/images/";
-    document.body.style.backgroundImage = 'url('+link+check+')';
+    check = initBackgrounds[Math.floor(Math.random() * 8)+1];
+    var link = "https://raw.githubusercontent.com/Vaporjawn/JoJos-Bizarre-Adventure-Randomizer/master/images/";
+    link = link + check;
+    document.body.style.backgroundImage = 'url('+link+')';
+    console.log(link);
 }
