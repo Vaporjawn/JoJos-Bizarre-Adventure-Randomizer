@@ -1,8 +1,13 @@
 p {
   border: 1px solid powderblue;
 }
-a{
-  color: #000000;
+a {
+  color: whitesmoke;
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+}
+a:hover {
+  box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
 }
 h1 {
   text-align: center;
@@ -20,7 +25,9 @@ body {
   background-size: 100%;
 }
 footer{
-  background-color: black;
+  text-align: center;
+  line-height: 1.3;
+  font-family: Menlo, monospace;
 }
 form {
   text-align: center;
@@ -52,4 +59,16 @@ button{
 button:hover{
   background: forestgreen;
   color: #fff;
+}
+ul {
+  display: inline-flex;
+  grid-gap: 24px;
+  justify-items: center;
+}
+li:last-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+li:hover ~ li p {
+  animation: wave-animation 0.3s infinite;
 }
