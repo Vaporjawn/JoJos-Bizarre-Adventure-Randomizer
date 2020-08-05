@@ -15,12 +15,12 @@ body {
   /* background-color: darkgrey; */
   text-align: center;
   background-image: url('https://wallpaperaccess.com/full/2090500.png');
-  
+  background-color: black;
   background-repeat: no-repeat;
   background-size: 100%;
 }
 footer{
-  background-color: rgb(32, 32, 32);
+  background-color: black;
 }
 form {
   text-align: center;
