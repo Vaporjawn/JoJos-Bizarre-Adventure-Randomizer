@@ -1,5 +1,6 @@
 var initBackgrounds = [
     "PB.png",
+    "BT.png",
     "SDC.png",
     "DiU.png",
     "VA.png",
