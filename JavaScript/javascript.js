@@ -62,6 +62,9 @@ function refreshPage(){
 function wiki(){
     window.open("https://jojo.fandom.com/wiki/Main_Page")
 }
+function randomWiki(){
+    window.open("https://jojo.fandom.com/wiki/Special:Random")
+}
 function newBackground(){
     var check;
     check = backgrounds[Math.floor(Math.random() * 39)+1];
