@@ -18,6 +18,14 @@ Reach out to me at one of the following places!
 
 ---
 
+## Donations
+
+- Support via <a href="https://paypal.me/vaporjawn" target="_blank">PayPal</a> to keep the site up and running.
+
+[![Support via paypal](./assets/paypal.png/)](https://paypal.me/vaporjawn)
+
+--
+
 ## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)

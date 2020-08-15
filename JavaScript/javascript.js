@@ -67,16 +67,16 @@ function selectAnime(part) {
             statement = episodes[Math.floor(Math.random() * 9)+1];
         break;
         case 2:
-            statement = episodes[Math.random() * (26 - 11) + 11];
+            statement = episodes[Math.floor(Math.random() * (26 - 11) + 11)];
         break;
         case 3:
-            statement = episodes[Math.random() * (98 - 27) + 27];
+            statement = episodes[Math.floor(Math.random() * (98 - 27) + 27)];
         break;
         case 4:
-            statement = episodes[Math.random() * (138 - 99) + 99];
+            statement = episodes[Math.floor(Math.random() * (138 - 99) + 99)];
         break;
         case 5:
-            statement = episodes[Math.random() * (152 - 138) + 138];
+            statement = episodes[Math.floor(Math.random() * (152 - 138) + 138)];
         break;
 
         default:
@@ -101,9 +101,11 @@ function newBackground(){
     check = backgrounds[Math.floor(Math.random() * 39)+1];
     document.body.style.backgroundImage = 'url('+check+')';
 }
-function initBackground(){
-    var check;
-    check = initBackgrounds[Math.floor(Math.random() * 8)];
+function initBackground(check){
+    if(check == undefined){
+        check = initBackgrounds[Math.floor(Math.random() * 8)];
+    }
+    check = initBackgrounds[check];
     var link = "https://raw.githubusercontent.com/Vaporjawn/JoJos-Bizarre-Adventure-Randomizer/master/images/";
     link = link + check;
     document.body.style.backgroundImage = 'url('+link+')';
