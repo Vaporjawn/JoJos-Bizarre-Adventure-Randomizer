@@ -2,7 +2,7 @@ function selectManga() {
     var mangaChapter = "";
     var chapterNumber;
     var chapterSelect;
-    var part = Math.floor(Math.random() * 8)+1;
+    var part = Math.floor(Math.random() * 10)+1;
 
     switch(part){
         case 1:
@@ -44,6 +44,13 @@ function selectManga() {
             chapterNumber = Math.floor(Math.random() * 99)+1;
             mangaChapter = "https://manganelo.com/chapter/yx917940/chapter_" + chapterNumber;
         break;
+        case 9:
+            chapterNumber = Math.floor(Math.random() * 5)+1;
+            mangaChapter = "https://manganelo.com/chapter/oo922205/chapter_" + chapterNumber;
+        break;
+        case 10:
+            chapterNumber = Math.floor(Math.random() * 3)+1;
+            mangaChapter = "https://manganelo.com/chapter/jojo_dead_mans_questions/chapter_" + chapterNumber;
     }
     
     return window.open(mangaChapter, "_blank");
