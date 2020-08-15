@@ -1,10 +1,12 @@
-function selectManga() {
+function selectManga(part) {
     var mangaChapter = "";
     var chapterNumber;
     var chapterSelect;
-    var part = Math.floor(Math.random() * 10)+1;
-
-    switch(part){
+    if(part == undefined){
+        part = Math.floor(Math.random() * 10)+1;
+    }
+    var partSelect = parseInt(part);
+    switch(partSelect){
         case 1:
             chapterNumber = Math.floor(Math.random() * 44)+1;
             mangaChapter = "https://manganelo.com/chapter/phantom_blood/chapter_" + chapterNumber + ".2";
@@ -56,9 +58,31 @@ function selectManga() {
     return window.open(mangaChapter, "_blank");
 ;
 }
-function selectAnime() {
+function selectAnime(part) {
     var statement;
-     statement = episodes[Math.floor(Math.random() * 152)+1];
+    var partSelect = parseInt(part);
+
+    switch(partSelect){
+        case 1:
+            statement = episodes[Math.floor(Math.random() * 9)+1];
+        break;
+        case 2:
+            statement = episodes[Math.random() * (26 - 11) + 11];
+        break;
+        case 3:
+            statement = episodes[Math.random() * (98 - 27) + 27];
+        break;
+        case 4:
+            statement = episodes[Math.random() * (138 - 99) + 99];
+        break;
+        case 5:
+            statement = episodes[Math.random() * (152 - 138) + 138];
+        break;
+
+        default:
+            statement = episodes[Math.floor(Math.random() * 152)+1];
+
+    }
      answer = statement;
      console.log(statement);
      window.open(statement, "_blank");
@@ -84,4 +108,26 @@ function initBackground(){
     link = link + check;
     document.body.style.backgroundImage = 'url('+link+')';
     console.log(link);
+}
+function customize(){
+    var part = document.getElementById("part").value;
+    var medium = document.getElementById("medium").value;
+    var partSelect = parseInt(part);
+
+    if(medium == "anime"){
+        selectAnime(part);
+    }
+    if(medium == "manga"){
+        selectManga(part);
+    }
+    else{
+        var bruh = Math.floor(Math.random() * 2) + 1;
+        
+        if (bruh == 1){
+            selectAnime(part);
+        }
+        if (bruh == 2){
+            selectManga(part);
+        }
+    }
 }

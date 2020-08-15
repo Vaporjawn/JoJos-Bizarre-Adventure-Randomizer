@@ -16,17 +16,32 @@
       <script>initBackground();</script>
       <a href="https://www.youtube.com/watch?v=O2mm23Ia7ho" target="_blank"><img src = "https://upload.wikimedia.org/wikipedia/commons/a/af/JoJo%27s_Bizarre_Adventure_-_Stardust_Crusaders_logo.png" alt="jojo logo"></a>
 
-<h1><a href="index.html">JoJo's Bizarre Adventure Randomizer</a></h1>
+      <h1><a href="index.html">JoJo's Bizarre Adventure Randomizer</a></h1>
 
 <!-- button that allows the user to interact with the scripts -->
 <form id="form">
-  <button type="button" id="button" onclick="selectAnime()"> Select Anime</button><br/><br/>
-  <button type="button" id="button" onclick="selectManga()"> Select Manga</button><br/><br/>
-  <button type="button" id="button" onclick="wiki()"> JoJo Wiki</button><br/><br/>
-  <button type="button" id="button" onclick= "randomWiki()"> Random Wiki</button><br/><br/>
-  <button type="button" id="button" onClick="newBackground()"> New Background </button><br/><br/>
-  <button type="button" id="button" onClick="location.href='customize.html';"> Customize </button><br/><br/>
-
+  <label for="part">Choose a Part:</label>
+  <select id="part" name="part" size="10">
+    <option value="1">Phantom Blood</option>
+    <option value="2">Battle Tendency</option>
+    <option value="3">Stardust Crusaders</option>
+    <option value="4">Diamond Is Unbreakable</option>
+    <option value="5">Golden Wind</option>
+    <option value="6">Stone Ocean</option>
+    <option value="7">Steel Ball Run</option>
+    <option value="8">JoJolion</option>
+    <option value="9">Thus Spoke Kishibe Rohan</option>
+    <option value="10">Dead Man's Questions</option>
+  </select>
+  
+  <label for="medium">Anime or Manga:</label>
+  <select id="medium" name="medium" size="3">
+    <option value="anime" name="anime">Anime</option>
+    <option value="manga" name="manga">Manga</option>
+    <option value="both">Both</option>
+  </select>
+  <br>
+  <input type="submit" id="button" onClick="customize()"> </input>
 </form>
 
 		<!-- Footer -->

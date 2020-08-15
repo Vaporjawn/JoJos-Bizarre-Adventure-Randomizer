@@ -21,7 +21,7 @@ body {
   background-image: url('https://wallpaperaccess.com/full/2090500.png');
   background-color: black;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 footer{
   text-align: center;
@@ -36,6 +36,26 @@ form {
   margin: auto;
   background-color: clear;
   /* opacity: .0002; */
+}
+label{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 60px;
+  color: #000000;
+  cursor: text;
+
+}
+select{
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1px;
+  line-height: .75;
+  font-weight: bold;
+  margin: auto;
+  cursor: pointer;
+  border: 3px solid #000000;
+  background: #fff;
+  color: #000000;
+  border-radius: 20px;
+  overflow: hidden;
 }
 button{
   font-family: 'Ubuntu', sans-serif;
@@ -55,6 +75,27 @@ button{
 
 }
 button:hover{
+  background: forestgreen;
+  color: #fff;
+}
+input{
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: 1px;
+  width: 340px;
+  height: 80px;
+  line-height: .75;
+  font-size: 40px;
+  font-weight: bold;
+  margin: auto;
+  cursor: pointer;
+  border: 3px solid #000000;
+  background: #fff;
+  color: #000000;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+}
+input:hover{
   background: forestgreen;
   color: #fff;
 }
