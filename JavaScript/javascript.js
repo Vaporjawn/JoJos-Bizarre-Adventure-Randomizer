@@ -74,7 +74,7 @@ function randomWiki(){
 }
 function newBackground(){
     var check;
-    check = backgrounds[Math.floor(Math.random() * 39)+1];
+    check = backgrounds[Math.floor(Math.random() * 38)+1];
     document.body.style.backgroundImage = 'url('+check+')';
 }
 function initBackground(){
