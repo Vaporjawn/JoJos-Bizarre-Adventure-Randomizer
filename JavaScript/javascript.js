@@ -105,7 +105,9 @@ function initBackground(check){
     if(check == undefined){
         check = initBackgrounds[Math.floor(Math.random() * 8)];
     }
-    check = initBackgrounds[check];
+    else{
+        check = initBackgrounds[check];
+    }
     var link = "https://raw.githubusercontent.com/Vaporjawn/JoJos-Bizarre-Adventure-Randomizer/master/images/";
     link = link + check;
     document.body.style.backgroundImage = 'url('+link+')';
@@ -114,13 +116,16 @@ function initBackground(check){
 function customize(){
     var part = document.getElementById("part").value;
     var medium = document.getElementById("medium").value;
-    var partSelect = parseInt(part);
+    var partSelect = parseInt(part); //this is just in case something needs to have it parsed, otherwise it's done when it's passed into the next function
 
-    if(medium == "anime"){
+    if(medium == "anime" && part < 6){
         selectAnime(part);
     }
-    if(medium == "manga"){
+    if(medium == "manga" || part > 5){
         selectManga(part);
+    }
+    if(medium == "bio"){
+        bio(part);
     }
     else{
         var bruh = Math.floor(Math.random() * 2) + 1;
@@ -131,5 +136,41 @@ function customize(){
         if (bruh == 2){
             selectManga(part);
         }
+    }
+}
+
+function bio(part) {
+    if(part == undefined){
+        part = Math.floor(Math.random() * 8)+1;
+    }
+    var partSelect = parseInt(part);
+    switch(partSelect){
+        case 1:
+        location.href = "./bios/jonathan.html";
+        break;
+        case 2:
+            
+        break;
+        case 3:
+
+        break;
+        case 4:
+
+        break;
+        case 5:
+
+        break;
+        case 6:
+
+        break;
+        case 7:
+
+        break;
+
+        case 8:
+
+        break;
+        default:
+            console.log("Maybe there should be a bio here");
     }
 }
