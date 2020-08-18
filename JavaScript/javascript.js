@@ -146,29 +146,28 @@ function bio(part) {
     var partSelect = parseInt(part);
     switch(partSelect){
         case 1:
-        location.href = "./bios/jonathan.html";
+            location.href = "./bios/jonathan.html";
         break;
         case 2:
-            
+            location.href = "./bios/joseph.html";
         break;
         case 3:
-
+            location.href = "./bios/jotaro.html";
         break;
         case 4:
-
+            location.href = "./bios/josuke.html";
         break;
         case 5:
-
+            location.href = "./bios/giorno.html";
         break;
         case 6:
-
+            location.href = "./bios/jolyne.html";
         break;
         case 7:
-
+            location.href = "./bios/johnny.html";
         break;
-
         case 8:
-
+            location.href = "./bios/gappy.html";
         break;
         default:
             console.log("Maybe there should be a bio here");
