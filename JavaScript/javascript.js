@@ -1,3 +1,6 @@
+var sessionRedirect;
+var part;
+var key = sessionStorage.getItem("42");
 function selectManga(part) {
     var mangaChapter = "";
     var chapterNumber;
@@ -6,6 +9,11 @@ function selectManga(part) {
         part = Math.floor(Math.random() * 10)+1;
     }
     var partSelect = parseInt(part);
+    sessionRedirect = partSelect;
+    var bioLink = checkBio(partSelect);
+    sessionStorage.setItem(partSelect, bioLink);
+    sessionStorage.setItem("42", bioLink);
+    //key = partSelect;
     switch(partSelect){
         case 1:
             chapterNumber = Math.floor(Math.random() * 44)+1;
@@ -43,7 +51,7 @@ function selectManga(part) {
             mangaChapter = "https://manganelo.com/chapter/af918141/chapter_" + chapterNumber;
         break;
         case 8:
-            chapterNumber = Math.floor(Math.random() * 99)+1;
+            chapterNumber = Math.floor(Math.random() * 100)+1; //gotta remember to update monthly. the next time it'll need to be update to 101 is october 19th. maybe look into a counter that updates according to the date
             mangaChapter = "https://manganelo.com/chapter/yx917940/chapter_" + chapterNumber;
         break;
         case 9:
@@ -55,12 +63,22 @@ function selectManga(part) {
             mangaChapter = "https://manganelo.com/chapter/jojo_dead_mans_questions/chapter_" + chapterNumber;
     }
     
-    return window.open(mangaChapter, "_blank");
+    //redirectCheck(partSelect);
+    window.open(mangaChapter, "_blank");
+    return document.location.reload(true) //refreshPage();
+     
 ;
 }
 function selectAnime(part) {
     var statement;
+    if(part == undefined){
+        part = Math.floor(Math.random() * 5)+1;
+    }
     var partSelect = parseInt(part);
+    sessionRedirect = partSelect;
+    var bioLink = checkBio(partSelect);
+    sessionStorage.setItem(partSelect, bioLink);
+    sessionStorage.setItem("42", bioLink);
 
     switch(partSelect){
         case 1:
@@ -80,12 +98,15 @@ function selectAnime(part) {
         break;
 
         default:
+            partSelect = 1; //Using this for the redirectCheck() since it requires a Key to run properly
             statement = episodes[Math.floor(Math.random() * 152)+1];
 
     }
      answer = statement;
      console.log(statement);
      window.open(statement, "_blank");
+     return document.location.reload(true) //refreshPage();
+
 }
 function refreshPage(){
     window.location.reload();
@@ -172,4 +193,61 @@ function bio(part) {
         default:
             console.log("Maybe there should be a bio here");
     }
+}
+
+function checkBio(part){
+    var link;
+    if(part == undefined){
+        part = Math.floor(Math.random() * 8)+1;
+    }
+    var partSelect = parseInt(part);
+    switch(partSelect){
+        case 1:
+            link = "./bios/jonathan.html";
+        break;
+        case 2:
+            link = "./bios/joseph.html";
+        break;
+        case 3:
+            link = "./bios/jotaro.html";
+        break;
+        case 4:
+            link = "./bios/josuke.html";
+        break;
+        case 5:
+            link = "./bios/giorno.html";
+        break;
+        case 6:
+            link = "./bios/jolyne.html";
+        break;
+        case 7:
+            link = "./bios/johnny.html";
+        break;
+        case 8:
+            link = "./bios/gappy.html";
+        break;
+        default:
+            console.log("Maybe there should be a bio here");
+            link = "./bios/jonathan.html";
+    }
+    return link;
+}
+function redirectCheck(key){
+    if(key == undefined || key == "undefined"){
+        sessionStorage.setItem("42", "index.html");
+        sessionRedirect = "./index.html";
+        return location.href = sessionRedirect;
+    }else{
+        sessionRedirect = key;
+        return location.href = sessionRedirect;
+
+    }
+
+}
+function realDirect(sessionRedirect){
+    location.href = sessionRedirect;
+}
+
+function sessionReset(){
+    sessionStorage.setItem("42", undefined);
 }
